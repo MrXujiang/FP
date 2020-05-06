@@ -1,0 +1,152 @@
+.frontend {
+    .tableWrap {
+        h3 {
+            position: relative;
+            line-height: 50px;
+            text-align: center;
+            .toolBar {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                .editBtn {
+                   margin-left: 16px; 
+                }
+            }
+        }
+    }
+}
+
+.editWrap {
+    position: relative;
+    width: 100%;
+    padding-left: 50px;
+    .tit {
+        font-size: 24px;
+    }
+    .content {
+        display: flex;
+        .formWrap {
+            margin-top: 20px;
+            padding: 16px;
+            width: 500px;
+            border: 1px dashed #06c;
+            .formControl {
+                position: relative;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                align-items: center;
+                .formItem {
+                    :global(.ant-row) {
+                        width: 360px;
+                        margin-bottom: 0;
+                    }
+                    :global(.ant-form-item-label) {
+                        label {
+                            width: 4.8em;
+                        }
+                    }
+                }
+                .formTit {
+                    font-size: 20px;
+                    text-align: center;
+                }
+                .actionBar {
+                    display: none;
+                    margin-left: 10px;
+                    .actionItem {
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                }
+                &:hover {
+                    .actionBar {
+                        display: block;
+                    }
+                }
+            }
+            .formAction {
+                margin-top: 20px;
+                padding-top: 16px;
+                border-top: 1px dashed #ccc;
+                .formBtn {
+                    display: inline-block;
+                    margin-right: 20px;
+                }
+            }
+            .visitLink {
+                margin-top: 20px;
+            }
+        }
+        .formPanel {
+            position: absolute;
+            top: 0;
+            right: 150px;
+            padding: 0 20px 20px;
+            width: 360px;
+            max-height: 640px;
+            overflow: scroll;
+            background-color: #fff;
+            box-shadow: -10px 0 20px rgba(0,0,0, .1);
+            .subTitle {
+                line-height: 3;
+                font-weight: bold;
+            }
+            .attrSetting {
+                min-height: 200px;
+                border-bottom: 1px solid rgba(0,0,0, .1);
+                .mutiRow {
+                    margin-top: 8px;
+                    .mutiItem {
+                        margin-bottom: 12px;
+                        .label {
+                            display: block;
+                            font-size: 12px;
+                            margin-bottom: 10px;
+                        }
+                        .formItem {
+                            display: flex;
+                            align-items: center;
+                            :global(.anticon) {
+                                margin-left: 10px;
+                                font-size: 18px;
+                                color: red;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            .chosenWrap {
+                border: 2px dashed transparent;
+                &.selected {
+                    animation: showBorder 3s;
+                }
+                .fieldLabel {
+                    display: inline-block;
+                    width: 60px;
+                    margin-right: 10px;
+                }
+                .fieldOption {
+                    display: inline-block;
+                    width: 220px;
+                    pointer-events: none;
+                    :global(.ant-upload-picture-card-wrapper) {
+                        transform: translateY(10px);
+                    }
+                }
+                @keyframes showBorder {
+                    0% {
+                        border: 2px dashed transparent;
+                    }
+                    50% {
+                        border: 2px dashed red;
+                    }
+                    100% {
+                        border: 2px dashed red;
+                    }
+                }
+            }
+        }
+    }
+}
